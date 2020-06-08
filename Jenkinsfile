@@ -26,6 +26,7 @@ pipeline {
         }
         stage('Deliver') { 
             steps {
+                sh 'chmod +x -R ./jenkins/scripts/deliver.sh'
                 sh './jenkins/scripts/deliver.sh' 
             }
         }
